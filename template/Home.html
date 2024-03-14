@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <title>Temperature and Humidity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <script>
+        // Reload the page every 30 seconds
+        setInterval(function() {
+            location.reload();
+        }, 10000); // 30 seconds in milliseconds
+    </script>
+</head>
+<body>
+    <div class="navbar">
+      <a href=Feedback>Feedback</a>
+      <a href=Event>Event</a>
+      <div class="dropdown">
+        <button class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href=About_us>About us</a>
+          <a href=About_project>About project</a>
+        </div>
+      </div>
+      <a href=Country>Country</a>
+      <a href=State>State</a>
+      <a href=Home>Home</a>
+      <div class="logo">
+          <img src="{{ url_for('get_image', filename='helpline.png') }}" alt="">
+      </div>
+      <div class="helpline">
+          <h4>Helpline:1234567891</h4>
+      </div>
+    </div>
+    <div class="content">
+        <h1>Temperature and Humidity</h1>
+    </div>
+    <div class="box">
+        <div class="humidity">
+            <img src="{{ url_for('get_image', filename='humidity.png') }}" alt="">
+            <h1>Temperature: {{ temperature }}°C</h1>
+        </div>
+            <div class="temperature">
+            <img src="{{ url_for('get_image', filename='temperature.png') }}" alt="">
+            <h1>Humidity: {{ humidity }}%</h1>
+        </div>
+    </div>
+
+</body>
+</html>

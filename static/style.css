@@ -1,0 +1,113 @@
+html, body, div, header, nav, ul, li, section, footer {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.menu{
+    width: 100%;
+    margin: 0 10px;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-container:space-between;
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+
+}
+.menu ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu ul li a:hover{
+    font-size: 110%
+ }
+ .content{
+    width: 100%
+    position: absolute;
+    text-align: center;
+    color: #fff;
+ }
+.content_A{
+    width: 100%
+    position: absolute;
+    margin-top: 12em;
+    transform: translateY(200%);
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+
+}
+.humidity{
+    margin:150px 825px;
+    position: absolute;
+}
+.temperature{
+    margin:120px 225px;
+    position: absolute;
+}
+.popup{
+    background: white;
+    width: 420px;
+    padding:30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-famliy: sans-serif;
+    text-align: center;
+}
+button{
+    display: block;
+    margin: 0 0 20px auto;
+    background: transparent;
+    font-size: 30px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #03549a;
+    colour:white;
+}
+.popup h2{
+    margin-top: -20px;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}

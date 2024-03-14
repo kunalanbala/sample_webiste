@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature and Humidity</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback.css') }}">
+</head>
+<body>
+    <div class="navbar">
+      <a href=Feedback>Feedback</a>
+      <a href=Event>Event</a>
+      <div class="dropdown">
+        <button class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href=About_us>About us</a>
+          <a href=About_project>About project</a>
+        </div>
+      </div>
+      <a href=Country>Country</a>
+      <a href=State>State</a>
+      <a href=Home>Home</a>
+      <div class="logo">
+          <img src="{{ url_for('get_image', filename='helpline.png') }}" alt="">
+      </div>
+      <div class="helpline">
+          <h4>Helpline:1234567891</h4>
+      </div>
+    </div>
+    <div class="form">
+        <form id="myForm" method="POST" action="{{ url_for('feedback') }}">
+            <div class="title">
+                <h1>FEEDBACK</h1>
+            </div>
+            <div class="name">
+                <label for="name">Name:</label>
+            </div>
+            <input type="text" id="name" name="name" required>
+            <div class="email">
+                <label for="email">email:</label>
+            </div>
+            <input type="text" id="email" name="email" required>
+            <div class="message">
+                <label for="message">message:</label>
+            </div>
+            <textarea rows="5" cols="60" type= "text" id="message" name="message" autocomplete="off" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="successPopup" class="popup">
+        <p align="center">Thank you<br>Successfully Submitted</p>
+    </div>
+    <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        // Show the popup
+        document.getElementById("successPopup").style.display = "block";
+        // Prevent form submission
+        event.preventDefault();
+        // Submit the form after a delay (to show the popup)
+        setTimeout(function() {
+            document.getElementById("myForm").submit();
+        }, 2000); // 2000 milliseconds = 2 seconds
+    });
+    </script>
+</body>
+</html>

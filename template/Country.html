@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature and Humidity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='country.css') }}">
+    <script>
+    function autoRefresh() {
+        window.location = window.location.href;
+    }
+    setInterval('autoRefresh()', 10000);
+    </script>
+</head>
+<body>
+<div class="navbar">
+      <div class="navbar">
+      <a href=Feedback>Feedback</a>
+      <a href=Event>Event</a>
+      <div class="dropdown">
+        <button class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href=About_us>About us</a>
+          <a href=About_project>About project</a>
+        </div>
+      </div>
+      <a href=Country>Country</a>
+      <a href=State>State</a>
+      <a href=Home>Home</a>
+      <div class="logo">
+          <img src="{{ url_for('get_image', filename='helpline.png') }}" alt="">
+      </div>
+      <div class="helpline">
+          <h4>Helpline:1234567891</h4>
+      </div>
+    </div>
+    <div class="table">
+         <table style="table">
+          <tr>
+              <th colspan="5">Annual data</th>
+          </tr>
+          <tr>
+            <th>Year</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Temperature %</th>
+            <th>Humidity %</th>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>25.3°C</td>
+            <td>70%</td>
+            <td>{{ t1 }}°C</td>
+            <td>{{ h1 }}%</td>
+          </tr>
+           <tr>
+            <td>2020</td>
+            <td>25.78°C</td>
+            <td>70%</td>
+            <td>{{ t2 }}°C</td>
+            <td>{{ h2 }}%</td>
+          </tr>
+           <tr>
+            <td>2019</td>
+            <td>25.86°C</td>
+            <td>70%</td>
+            <td>{{ t3 }}°C</td>
+            <td>{{ h3 }}%</td>
+          </tr>
+           <tr>
+            <td>2018</td>
+            <td>25.9°C</td>
+            <td>70%</td>
+            <td>{{ t4 }}°C</td>
+            <td>{{ h4 }}%</td>
+          </tr>
+           <tr>
+            <td>2017</td>
+            <td>26.04°C</td>
+            <td>70%</td>
+            <td>{{ t5 }}°C</td>
+            <td>{{ h5 }}%</td>
+          </tr>
+           <tr>
+            <td>2016</td>
+            <td>26.2°C</td>
+            <td>70%</td>
+            <td>{{ t6 }}°C</td>
+            <td>{{ h6 }}%</td>
+          </tr>
+           <tr>
+            <td>2015</td>
+            <td>25.92°C</td>
+            <td>70%</td>
+            <td>{{ t7 }}°C</td>
+            <td>{{ h7 }}%</td>
+          </tr>
+           <tr>
+            <td>2014</td>
+            <td>25.73°C</td>
+            <td>70%</td>
+            <td>{{ t8 }}°C</td>
+            <td>{{ h8 }}%</td>
+          </tr>
+           <tr>
+            <td>2013</td>
+            <td>25.68°C</td>
+            <td>70%</td>
+            <td>{{ t9 }}°C</td>
+            <td>{{ h9 }}%</td>
+          </tr>
+           <tr>
+            <td>2012</td>
+            <td>25.6°C</td>
+            <td>70%</td>
+            <td>{{ t10 }}°C</td>
+            <td>{{ h10 }}%</td>
+          </tr>
+</div>
+</body>
+</html>

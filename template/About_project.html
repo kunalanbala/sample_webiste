@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature and Humidity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about_project.css') }}">
+</head>
+<body>
+    <div class="navbar">
+      <a href=Feedback>Feedback</a>
+      <a href=Event>Event</a>
+      <div class="dropdown">
+        <button class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href=About_us>About us</a>
+          <a href=About_project>About project</a>
+        </div>
+      </div>
+      <a href=Country>Country</a>
+      <a href=State>State</a>
+      <a href=Home>Home</a>
+      <div class="logo">
+          <img src="{{ url_for('get_image', filename='helpline.png') }}" alt="">
+      </div>
+      <div class="helpline">
+          <h4>Helpline:1234567891</h4>
+      </div>
+    </div>
+    <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <div class="slide first">
+                    <img src="{{ url_for('get_image', filename='1.jpg') }}" alt="">
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('get_image', filename='2.jpg') }}" alt="">
+
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('get_image', filename='3.jpg') }}" alt="">
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('get_image', filename='4.jpg') }}" alt="">
+                </div>
+                <div class="slide">
+                    <img src="{{ url_for('get_image', filename='5.jpg') }}" alt="">
+                </div>
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                </div>
+            </div>
+            <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+            </div>
+        </div>
+        <div class="vision">
+            <h1>OUR VISION</h1>
+            <p>"To build a safer and disaster resilient India by a holistic, pro-active,<br> technology driven and sustainable development strategy that involves all stakeholders and fosters a culture of prevention, preparedness and mitigation. "</p>
+        </div>
+        <div class="service">
+            <h1>OUR SERVICE</h1>
+        </div>
+        <div class="boxing">
+            <div class="box">
+               <img src="{{ url_for('get_image', filename='1.jpg') }}" alt="">
+            </div>
+            <div class="box">
+               <img src="{{ url_for('get_image', filename='2.jpg') }}" alt="">
+            </div>
+            <div class="box">
+               <img src="{{ url_for('get_image', filename='3.jpg') }}" alt="">
+            </div>
+            <div class="box">
+               <img src="{{ url_for('get_image', filename='4.jpg') }}" alt="">
+            </div>
+            <div class="box">
+               <img src="{{ url_for('get_image', filename='5.jpg') }}" alt="">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 5){
+            counter = 1;
+        }
+    }, 2000);
+    </script>
+</body>
+</html>

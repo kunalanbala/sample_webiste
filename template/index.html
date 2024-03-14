@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <title>Temperature and Humidity</title>
+    <meta http-equiv="refresh" content="5;Home">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="navbar">
+      <a href=Feedback>Feedback</a>
+      <a href=Event>Event</a>
+      <div class="dropdown">
+        <button class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href=About_us>About us</a>
+          <a href=About_project>About project</a>
+        </div>
+      </div>
+      <a href=Country>Country</a>
+      <a href=State>State</a>
+      <a href=Home>Home</a>
+      <div class="logo">
+          <img src="{{ url_for('get_image', filename='helpline.png') }}" alt="">
+      </div>
+      <div class="helpline">
+          <h4>Helpline:1234567891</h4>
+      </div>
+    </div>
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h2>Automatic pop-up</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolore doloremque eius eligendi facere facilis inventore quas quos saepe sequi. Atque, cupiditate earum hic ipsa nam neque optio sunt voluptate! </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolore doloremque est, ex expedita impedit in laudantium molestias possimus praesentium quaerat qui quo recusandae rem saepe sapiente suscipit, tempore unde.</p>
+    </div>
+    <script type="text/javascript">
+    document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+    });
+    </script>
+</body>
+</html>

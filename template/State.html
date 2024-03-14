@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature and Humidity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='state.css') }}">
+    <script>
+    function autoRefresh() {
+        window.location = window.location.href;
+    }
+    setInterval('autoRefresh()', 10000);
+    </script>
+</head>
+<body>
+<div class="navbar">
+      <div class="navbar">
+      <a href=Feedback>Feedback</a>
+      <a href=Event>Event</a>
+      <div class="dropdown">
+        <button class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href=About_us>About us</a>
+          <a href=About_project>About project</a>
+        </div>
+      </div>
+      <a href=Country>Country</a>
+      <a href=State>State</a>
+      <a href=Home>Home</a>
+      <div class="logo">
+          <img src="{{ url_for('get_image', filename='helpline.png') }}" alt="">
+      </div>
+      <div class="helpline">
+          <h4>Helpline:1234567891</h4>
+      </div>
+    </div>
+    <div class="table">
+         <table style="table1">
+          <tr>
+              <th colspan="5">Pondicherry</th>
+          </tr>
+          <tr>
+            <th>Year</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Temperature %</th>
+            <th>Humidity %</th>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>28.1°C</td>
+            <td>70%</td>
+            <td>{{ pyt1 }}°C</td>
+            <td>{{ pyh1 }}%</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>27.9°C</td>
+            <td>70%</td>
+            <td>{{ pyt2 }}°C</td>
+            <td>{{ pyh2 }}%</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>28°C</td>
+            <td>70%</td>
+            <td>{{ pyt3 }}°C</td>
+            <td>{{ pyh3 }}%</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>28°C</td>
+            <td>70%</td>
+            <td>{{ pyt4 }}°C</td>
+            <td>{{ pyh4 }}%</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td>28.1°C</td>
+            <td>70%</td>
+            <td>{{ pyt5 }}°C</td>
+            <td>{{ pyh5 }}%</td>
+          </tr>
+          <table style="table2">
+          <tr>
+              <th colspan="5">Chennai</th>
+          </tr>
+          <tr>
+            <th>Year</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Temperature %</th>
+            <th>Humidity %</th>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>28.5°C</td>
+            <td>70%</td>
+            <td>{{ cht1 }}°C</td>
+            <td>{{ chh1 }}%</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>28.3°C</td>
+            <td>70%</td>
+            <td>{{ cht2 }}°C</td>
+            <td>{{ chh2 }}%</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>28.3°C</td>
+            <td>70%</td>
+            <td>{{ cht3 }}°C</td>
+            <td>{{ chh3 }}%</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>28.4°C</td>
+            <td>70%</td>
+            <td>{{ cht4 }}°C</td>
+            <td>{{ chh4 }}%</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td>28.6°C</td>
+            <td>70%</td>
+            <td>{{ cht5 }}°C</td>
+            <td>{{ chh5 }}%</td>
+          </tr>
+          <table style="table3">
+          <tr>
+              <th colspan="5">Kerala</th>
+          </tr>
+          <tr>
+            <th>Year</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Temperature %</th>
+            <th>Humidity %</th>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>27.9°C</td>
+            <td>70%</td>
+            <td>{{ klt1 }}°C</td>
+            <td>{{ klh1 }}%</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>27.4°C</td>
+            <td>70%</td>
+            <td>{{ klt2 }}°C</td>
+            <td>{{ klh2 }}%</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>27.5°C</td>
+            <td>70%</td>
+            <td>{{ klt3 }}°C</td>
+            <td>{{ klh3 }}%</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>28.2°C</td>
+            <td>70%</td>
+            <td>{{ klt4 }}°C</td>
+            <td>{{ klh4 }}%</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td>28°C</td>
+            <td>70%</td>
+            <td>{{ klt5 }}°C</td>
+            <td>{{ klh5 }}%</td>
+          </tr>
+          <table style="table4">
+          <tr>
+              <th colspan="5">Karnataka</th>
+          </tr>
+          <tr>
+            <th>Year</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Temperature %</th>
+            <th>Humidity %</th>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>24.3°C</td>
+            <td>70%</td>
+            <td>{{ kat1 }}°C</td>
+            <td>{{ kah1 }}%</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>23.7°C</td>
+            <td>70%</td>
+            <td>{{ kat2 }}°C</td>
+            <td>{{ kah2 }}%</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>23.9°C</td>
+            <td>70%</td>
+            <td>{{ kat3 }}°C</td>
+            <td>{{ kah3 }}%</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>24.3°C</td>
+            <td>70%</td>
+            <td>{{ kat4 }}°C</td>
+            <td>{{ kah4 }}%</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td>24.6°C</td>
+            <td>70%</td>
+            <td>{{ kat5 }}°C</td>
+            <td>{{ kah5 }}%</td>
+          </tr>
+          <table style="table5">
+          <tr>
+              <th colspan="5">Andhra Pradesh</th>
+          </tr>
+          <tr>
+            <th>Year</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Temperature %</th>
+            <th>Humidity %</th>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>28°C</td>
+            <td>70%</td>
+            <td>{{ tlt1 }}°C</td>
+            <td>{{ tlh1 }}%</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>27.4°C</td>
+            <td>70%</td>
+            <td>{{ tlt2 }}°C</td>
+            <td>{{ tlh2 }}%</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>27.5°C</td>
+            <td>70%</td>
+            <td>{{ tlt3 }}°C</td>
+            <td>{{ tlh3 }}%</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>27.4°C</td>
+            <td>70%</td>
+            <td>{{ tlt4 }}°C</td>
+            <td>{{ tlh4 }}%</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td>27.4°C</td>
+            <td>70%</td>
+            <td>{{ tlt5 }}°C</td>
+            <td>{{ tlh5 }}%</td>
+          </tr>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

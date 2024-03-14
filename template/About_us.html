@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature and Humidity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about_us.css') }}">
+</head>
+<body>
+    <div class="navbar">
+     <div class="navbar">
+      <a href=Feedback>Feedback</a>
+      <a href=Event>Event</a>
+      <div class="dropdown">
+        <button class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href=About_us>About us</a>
+          <a href=About_project>About project</a>
+        </div>
+      </div>
+      <a href=Country>Country</a>
+      <a href=State>State</a>
+      <a href=Home>Home</a>
+      <div class="logo">
+          <img src="{{ url_for('get_image', filename='helpline.png') }}" alt="">
+      </div>
+      <div class="helpline">
+          <h4>Helpline:1234567891</h4>
+      </div>
+      <div class="boxbox">
+        <div class="box">
+            <img src="{{ url_for('get_image', filename='1.jpg') }}" alt="">
+            <h1>About us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> A aliquid atque consequatur, culpa cupiditate doloremque exercitationem, incidunt nihil quas quo quos tenetur vitae voluptatibus.<br> Accusantium alias commodi consectetur facilis illum.</p>
+        </div>
+        <div class="mission">
+            <div>
+                <img src="{{ url_for('get_image', filename='2.jpg') }}" alt="">
+                <img src="{{ url_for('get_image', filename='3.jpg') }}" alt="">
+                <div class="missionimage">
+                    <img src="{{ url_for('get_image', filename='4.jpg') }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="missiontext">
+            <h1>OUR MISSION</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> A adipisci aliquam aperiam cum dolore dolorem doloremque esse ex illum iure molestias nam,<br> nihil nobis non recusandae repellat repudiandae soluta vitae.</p>
+        </div>
+        <div class="teamtext">
+            <h1>OUR TEAM</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dignissimos dolorem odio repellendus sed.<br> Amet aut delectus ducimus exercitationem ipsa labore magni maiores perspiciatis porro praesentium quaerat similique, tempora vel?</p>
+        </div>
+        <div class="teamimage">
+            <img src="{{ url_for('get_image', filename='1.jpg') }}" alt="">
+            <img src="{{ url_for('get_image', filename='2.jpg') }}" alt="">
+            <img src="{{ url_for('get_image', filename='3.jpg') }}" alt="">
+        </div>
+        <div class="teamname">
+            <div class="student1">
+                <h1>NAME1</h1>
+                <h3>DEPT</h3>
+            </div>
+            <div class="student2">
+                <h1>NAME2</h1>
+                <h3>DEPT</h3>
+            </div>
+            <div class="student2">
+                <h1>NAME3</h1>
+                <h3>DEPT</h3>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
